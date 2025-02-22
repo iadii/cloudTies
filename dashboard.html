@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="bg-default">
+  <div class="container-fluid">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <nav class="navbar navbar-default w-100" style="background-color: #f8f9fa;">
+                <div class="container-fluid">
+                    <div class="navbar-header w-100">
+                        <a class="navbar-brand bg-secondary text-dark w-100 p-2">Aditya - Manage</a>
+                    </div>
+                </div>
+             </nav>
+              <ul class="nav navbar-nav">
+                  <li><a href="#" class="text-muted">System</a></li>
+                  <li><a href="#" class="text-muted">Hardware</a></li>
+                  <li><a href="#" class="text-muted">Licensing</a></li>
+                  <li><a href="#" class="text-muted">Packages</a></li>
+                  <li class="active"><a href="#" class="text-muted">Services</a></li>
+                  <li><a href="#" class="text-muted">Security & users</a></li>
+              </ul>
+          </div>
+      </nav>
+
+      <div class="btn-group">
+          <button class="btn btn-default"><i class="fa fa-play text-success"></i> Start</button>
+          <button class="btn btn-default"><i class="fa fa-stop text-danger"></i> Stop</button>
+          <button class="btn btn-default"><i class="fa fa-refresh"></i> Restart</button>
+          <button class="btn btn-default"><i class="fa fa-sync text-primary"></i> Refresh</button>
+          <button class="btn btn-default">Actions <i class="fa fa-cog"></i></button>
+      </div>
+
+      <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                  <th>Source</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>DCUI</td>
+                  <td>Direct Console UI</td>
+                  <td><i class="fa fa-play text-success"></i> Running</td>
+                  <td>Base system</td>
+              </tr>
+              <tr>
+                  <td>lbtd</td>
+                  <td>Load-Based Teaming Daemon</td>
+                  <td><i class="fa fa-play text-success"></i> Running</td>
+                  <td>Base system</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <div class="panel panel-default">
+          <div class="panel-heading">Recent tasks</div>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Task</th>
+                      <th>Target</th>
+                      <th>Initiator</th>
+                      <th>Queued</th>
+                      <th>Started</th>
+                      <th>Result</th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+      </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
