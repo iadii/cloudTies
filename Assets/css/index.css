@@ -3,7 +3,7 @@
     --grey : #2c3e50;
   }
 
-.nav-tabs > li.active > a {
+.nav-tabs > li.active > .Assigns {
     border-top: 3px solid #337ab7;
 }
 .required:after {
@@ -36,7 +36,7 @@ background-color: --grey;
 }
 
 .navbar-custom .navbar-brand,
-.navbar-custom .navbar-nav > li > a {
+.navbar-custom .navbar-nav > li > .nav-linkss {
 color: --white;
 }
 
