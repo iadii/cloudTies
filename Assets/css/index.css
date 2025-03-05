@@ -11,8 +11,8 @@
     color: #ff0000;
 }
 .sidebar {
-    background-color: --grey;
-    color: --white;
+    background-color: var(--grey);
+    color: var(--white);
     min-height: 100vh;
 }
 .content-area {
@@ -32,11 +32,11 @@ left: 0;
 }
 
 .navbar-custom {
-background-color: --grey;
+background-color: var(--grey);
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav > li > .nav-linkss {
-color: --white;
+color: var(--white);
 }
 
