@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Assignment Management</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./Assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
     <nav class="navbar navbar-custom">
@@ -13,14 +13,14 @@
                 <button type="button" id="sidebarToggle" class="btn btn-link navbar-btn">
                     <i class="fa fa-bars text-white"></i>
                  </button>  
-                <a class="navbar-brand" href="#">AI Robots</a>
+                <a class="navbar-brand" href="#" id="navbarBrand">AI Robots</a>
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="#" class="nav-linkss">Home</a></li>
-                <li><a href="./assignment.html" class="nav-linkss">Assignment</a></li>
-                <li><a href="./assignment.html" class="nav-linkss">Manage Assignment</a></li>
-                <li><a href="./assignment.html" class="nav-linkss">New Assignment</a></li>
+                <li><a href="#" class="nav-links" id="homeLink">Home</a></li>
+                <li><a href="./assignment.html" class="nav-links" id="assignmentLink">Assignment</a></li>
+                <li><a href="#manage" class="nav-links" id="manageAssignmentLink">Manage Assignment</a></li>
+                <li><a href="#approve" class="nav-links" id="newAssignmentLink">New Assignment</a></li>
             </ul>
         </div>
      </nav>
@@ -29,59 +29,69 @@
          
             <div id="sidebar" class="sidebar">
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="./dashboard.html">Dashboard</a></li>
-                    <li class="active"><a href="./assignment.html">Assignment</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="#" id="sidebarHomeLink">Home</a></li>
+                    <li><a href="./dashboard.html" id="sidebarDashboardLink">Dashboard</a></li>
+                    <li class="active"><a href="./assignment.html" id="sidebarAssignmentLink">Assignment</a></li>
+                    <li><a href="#" id="sidebarSettingsLink">Settings</a></li>
                 </ul>
             </div>
 
             <div class="col-md-10 content-area">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#manage" data-toggle="tab" class="Asigns">Manage Assignment</a></li>
-                    <li><a href="#approve" data-toggle="tab" class="Asigns">Approve Assignment</a></li>
-                    <li><a href="#published" data-toggle="tab" class="Asigns">Published Assignment</a></li>
+                    <li class="active"><a href="#manage" data-toggle="tab" class="assigns" id="manageTab">Manage Assignment</a></li>
+                    <li><a href="#approve" data-toggle="tab" class="assigns" id="approveTab">Approve Assignment</a></li>
+                    <li><a href="#published" data-toggle="tab" class="assigns" id="publishedTab">Published Assignment</a></li>
                 </ul>
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="manage">
                         <h4>Add Assignment</h4>
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" id="assignmentForm">
                             <div class="form-group">
-                                <label class="col-sm-2 control-label required">Organization</label>
+                                <label for="organization" class="col-sm-2 control-label required">Organization</label>
                                 <div class="col-sm-6">
-                                    <select class="form-control">
-                                        <option>Organization 1</option>
+                                    <select class="form-control" id="organization" required>
+                                        <option value="">Select Organization</option>
+                                        <option value="1">Organization 1</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label required">Site</label>
+                                <label for="site" class="col-sm-2 control-label required">Site</label>
                                 <div class="col-sm-6">
-                                    <select class="form-control">
-                                        <option>Site 2</option>
+                                    <select class="form-control" id="site" required>
+                                        <option value="">Select Site</option>
+                                        <option value="2">Site 2</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label required">Assignment Name</label>
+                                <label for="assignmentName" class="col-sm-2 control-label required">Assignment Name</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="assignmentName" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Description</label>
+                                <label for="description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-6">
-                                    <textarea class="form-control" rows="4"></textarea>
+                                    <textarea class="form-control" id="description" rows="4"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-6">
-                                    <button type="button" class="btn btn-default">Cancel</button>
-                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <button type="button" class="btn btn-default" id="cancelButton">Cancel</button>
+                                    <button type="submit" class="btn btn-primary" id="saveChangesButton">Save Changes</button>
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="tab-pane" id="approve">
+                        <h4>Approve Assignments</h4>
+                        <div class="alert alert-info">No assignments pending approval.</div>
+                    </div>
+                    <div class="tab-pane" id="published">
+                        <h4>Published Assignments</h4>
+                        <div class="alert alert-info">No published assignments found.</div>
                     </div>
                 </div>
             </div>

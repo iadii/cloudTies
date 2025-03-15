@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
     <title>Assignment Management</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +33,7 @@
                         <h3 class="panel-title">Jobs</h3>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addJobModal" id="NewJ">
+                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addJobModal" id="addNewJobBtn">
                             Add New Job
                         </button>
                     </div>
@@ -47,10 +46,10 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#jobAccordion" href="#job1">
+                                <a data-toggle="collapse" data-parent="#jobAccordion" href="#job1" id="job1Link">
                                     Job 1: Initial Setup
                                 </a>
-                                <button class="btn btn-xs btn-danger pull-right delete-job" id="deleteJ">Delete Job</button>
+                                <button class="btn btn-xs btn-danger pull-right delete-job" id="deleteJobBtn">Delete Job</button>
                             </h4>
                         </div>
                         <div id="job1" class="panel-collapse collapse in">
@@ -78,14 +77,14 @@
                                                         <td>In Progress</td>
                                                         <td>2025-02-15</td>
                                                         <td>
-                                                            <button class="btn btn-xs btn-default edit-task" id="edit-btn">Edit</button>
-                                                            <button class="btn btn-xs btn-danger delete-task"id="delete-btn">Delete</button>
+                                                            <button class="btn btn-xs btn-default edit-task" id="editTaskBtn">Edit</button>
+                                                            <button class="btn btn-xs btn-danger delete-task" id="deleteTaskBtn">Delete</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#addTaskModal" id="addTask-btn">
+                                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#addTaskModal" id="addTaskBtn">
                                             Add Task
                                         </button>
                                     </div>
@@ -126,8 +125,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="close-btn">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveJobBtn" id=""saveJ-btn>Save Job</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeJobBtn">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveJobBtn">Save Job</button>
                 </div>
             </div>
         </div>
@@ -165,8 +164,9 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeF">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveTaskBtn"id="saveF ">Save Task</button>
+                    
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeTaskBtn">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveTaskBtn">Save Task</button>
                 </div>
             </div>
         </div>
